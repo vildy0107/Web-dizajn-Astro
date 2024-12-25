@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin panel</title>
+  <link rel="stylesheet" type="text/css" href="admin.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="https://img.freepik.com/free-vector/3d-metal-star-isolated_1308-116518.jpg">
+</head>
+<body>
+<header>
+<div class="logo">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="login.html">Login</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <span onclick="openNav()"><img src="menu-icon-PNG-1.png" class="menu-icon"></span>
+</div>
+    <ul class="lista1">
+        
+        <li class="li1"><a href="index.html" id="current">Home</a></li>
+        <li class="li1"><a href="stations.html">Fun Facts</a></li>
+        <li class="li1"><a href="history.html">History</a></li>
+        
+    </ul>
+
+<body>
+<div class="container">
+  <h2>Dobrodošao, Admin!</h2>
+  <h2>Pretraži korisnike</h2>
+  <input type="text" id="userSearchInput" placeholder="Pretraži po username">
+  <button onclick="searchUsers()" id="pretragaUsername">Pretraži</button>
+  <ul id="userList"></ul>
+  <h2>Pretraži po imenu</h2>
+  <input type="text" id="nameSearchInput" placeholder="Unesi ime">
+  <input type="text" id="lastNameSearchInput" placeholder="Unesi prezime">
+  <button onclick="searchName()" id="pretragaIme">Pretraži</button>
+  <ul id="messageList"></ul>
+  <script>
+    function searchUsers() {
+  const searchValue = document.getElementById('userSearchInput').value.trim().toLowerCase();
+  const userList = document.getElementById('userList');
+  userList.innerHTML = '';
+  fetch('/users')
+    .then(response => response.json())
+    .then(users => {
+      const user = users.find(user => user.username.toLowerCase() === searchValue);
+      if (user) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `Username: ${user.username}, Šifra: ${user.password}`;
+        userList.appendChild(listItem);
+      } else {
+        const listItem = document.createElement('li');
+        listItem.textContent = 'Korisnik nije pronađen.';
+        userList.appendChild(listItem);
+      }
+    })
+    .catch(error => console.error('Error fetching users:', error));
+}
+function searchName() {
+  const firstName = document.getElementById('nameSearchInput').value.trim().toLowerCase();
+  const lastName = document.getElementById('lastNameSearchInput').value.trim().toLowerCase();
+  const messageList = document.getElementById('messageList');
+  messageList.innerHTML = '';
+  fetch('/messages')
+    .then(response => response.json())
+    .then(messages => {
+      const filteredMessages = messages.filter(message => {
+        const fullName = message.name.toLowerCase();
+        return fullName.includes(firstName);
+      });
+      if (filteredMessages.length > 0) {
+        filteredMessages.forEach(message => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `Od: ${message.name} ${message.lastName}, Email: ${message.email}, Poruka: ${message.message}`;
+          messageList.appendChild(listItem);
+        });
+      } else {
+        const listItem = document.createElement('li');
+        listItem.textContent = 'Korisnik nije pronađen.';
+        messageList.appendChild(listItem);
+      }
+    })
+    .catch(error => console.error('Error fetching messages:', error));
+}
+</script>
+</div>
+</body>
+</html>

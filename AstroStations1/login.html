@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AstroStation</title>
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/free-vector/3d-metal-star-isolated_1308-116518.jpg">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+<header>
+<div class="logo">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="login.html">Login</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <span onclick="openNav()"><img src="menu-icon-PNG-1.png" class="menu-icon"></span>
+</div>
+    <ul class="lista1">
+        
+        <li class="li1"><a href="index.html" id="current">Home</a></li>
+        <li class="li1"><a href="stations.html">Fun Facts</a></li>
+        <li class="li1"><a href="history.html">History</a></li>
+        
+    </ul>
+
+</header>
+  <div class="container">
+    <div class="login">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  <div class="register">
+  <h2>Register</h2>
+    <form action="/register" method="post">
+      <div>
+        <label for="regUsername">Username:</label>
+        <input type="text" id="regUsername" name="regUsername" required>
+      </div>
+    <div>
+      <label for="regPassword">Password:</label>
+      <input type="password" id="regPassword" name="regPassword" required>
+    </div>
+    <div>
+      <button type="submit">Register</button>
+    </div>
+    </form>
+  </div>
+</div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const loginErrorMessage = urlParams.get('loginError');
+    const registerErrorMessage = urlParams.get('registerError');
+
+    if (loginErrorMessage) {
+      document.getElementById('loginErrorMessage').innerText = loginErrorMessage;
+      alert(loginErrorMessage);
+    }
+
+    if (registerErrorMessage) {
+      document.getElementById('registerErrorMessage').innerText = registerErrorMessage;
+      alert(registerErrorMessage);
+    }
+  </script>
+  <footer>
+    <p>&copy; 2024 AstroStation. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

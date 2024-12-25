@@ -1,0 +1,614 @@
+body{
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #062c80;
+}
+.logo{
+    width: 100%;
+    overflow: hidden;
+    background:  #062c80;
+    color: #ffffff;
+    display: flex;
+    
+    align-items: center;
+    padding-left: 20px;
+}
+.logo p{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0%;
+}
+
+.menu-icon{
+    height: 100px;
+    width: 120px;
+}
+.menu-icon:hover{
+    opacity: 0.7;
+    scale: 1.2;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color:  #062c80; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidenav a:hover {
+    color: #87CEEB;
+    scale: 1.3;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.lista1{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #062c80;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.li1{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.li1 a{
+    display: inline-block;
+    color: lavender;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.li1 a:hover{
+    scale: 1.3;
+    color: #ffffff;
+    transition: 0.20s;
+    
+}
+#current{
+    color: white;
+}
+.showcase{
+    background-image: url('iss.avif');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 535px;
+    background-position: 90% 90%;
+}
+.showcase h1{
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    margin-left: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    margin-bottom: 35px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+
+.showcase h1:hover{
+    color:  #8dc6ff;
+}
+.bar h2{
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background: #0e6ac7;
+    
+}
+
+.bar h1:hover{
+    color:  #8dc6ff;
+}
+.showcase p{
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    margin-left: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-bottom: 70px;
+    text-shadow: gray 0.1em 0.1em 0.2em;
+}
+.showcase a{
+    text-decoration: none;
+    color: white;
+}
+.showcase button{
+    font-size: 1rem;
+    background-image: linear-gradient(90deg, #76ABDF, #C700AB 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    -webkit-text-fill-color: #fff;
+    margin-top: 4rem;
+    cursor: pointer;
+    position: relative;
+    transition: all;
+    outline: none;
+    color: white;
+}
+.showcase button:hover{
+    color:  #062c80;
+    scale: 1.3;
+    transition: 0.20s;
+}
+.showcase a:hover{
+    color:  #062c80;
+    scale: 1.3;
+    transition: 0.20s;
+}
+#link{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #062c80;
+    border-top: 2px solid #111111;
+}
+
+.stanica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #062c80;
+    color: white;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 9rem;
+}
+#tim{
+    border-top: 3px white solid;
+}
+.stanica p{
+    margin-top: 5px;
+    font-size: 40px;
+}
+.stanica1{
+    background-image: url("leclerc-naslovna.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.stanica1 p{
+    margin:0;
+    padding: 2px;
+    font-size: 30px;
+    text-shadow: black 5px 5px 5px;
+    color: white;
+}
+.stanica2{
+    margin-top: 10px;
+    background-image: url("sainz-naslovna.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.stanica2 p{
+    margin:0;
+    padding: 2px;
+    font-size: 30px;
+    text-shadow: black 5px 5px 5px;
+    color: white;
+}
+#name:hover{
+    scale: 1.3;
+    transition: 0.20s;
+    color:#87CEEB ;
+}
+.stanica2 a{
+    text-decoration: none;
+    color: white;
+}
+.stanica2 a:hover{
+    color: #87CEEB;
+    scale: 1.3;
+    transition: 0.20s;
+}
+.stanica1 a{
+    text-decoration: none;
+    color: white;
+}
+.stanica1 a:hover{
+    color: #87CEEB;
+    scale: 1.3;
+    transition: 0.20s;
+}
+
+
+
+
+.wrapper{
+    display: flex;
+    position: relative;
+    background-color:  #062c80;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url(https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg);
+}
+.wrapper i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+.wrapper i:active{
+    transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+    background: #f2f2f2;
+}
+.wrapper i:first-child{
+    left: -22px;
+    display: none;
+}
+.wrapper i:last-child{
+    right: -22px;
+}
+.wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+.carousel img{
+    height: 600px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+.carousel img:first-child{
+    margin-left: 0px;
+}
+.naslov{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color:  #062c80;
+    border-top: 2px solid #111111;
+}
+.naslov h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #f2f2f2;
+}
+
+
+.sljedeća{
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sljedeća a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.prethodna{
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.prethodna a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+.evolution{
+    width: 100%;
+    background-color:  #062c83;
+    
+    
+}
+.evolution h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color:white;
+    text-align: center;
+    padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+    border-top: #111111 2px solid;
+    color: #FFFFFF;
+    background-image: url(https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg);
+    text-shadow: 4px 3px 0 #7A7A7A;
+}
+
+.historija{
+    width: 50%;
+    background-color:  #062c80;
+    background-image: url(https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg);
+}
+.historija h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+    border-top: #111111 2px solid;
+    color: #FFFFFF;
+     background-image: url(https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg);
+text-shadow: 4px 3px 0 #7A7A7A;
+}
+
+
+
+.historija1 p{
+    
+font-family: Arial, Helvetica, sans-serif;
+font-size: 21px;
+color: white;
+letter-spacing: 2px;
+word-spacing: 2px;
+margin: 2rem;
+background-color:  #062c80;
+border: 5px inset rgba(28,110,164,0.55);
+background-image: url(https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg);
+opacity: 0.8;
+
+}
+
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width:100%;
+    padding: 0 30px;
+    padding-right: 0;
+    box-sizing: border-box;
+    background-color:  #062c80;
+    color: white;
+    border-top: #111111 2px solid;
+}
+#main h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #111111;
+}
+.historija{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color:  #062c80;
+    
+}
+.historija p{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.0em;
+    color: lavenderblush;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.container h2{
+    text-align: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    
+}
+
+
+.container1{
+    display: flex;
+}
+
+.side-by-side {
+    width: 50%; 
+    margin: 0;
+    padding: 0;
+}
+
+.button2{
+
+    font-size: 1rem;
+    background-image: linear-gradient(90deg, #76ABDF, #C700AB 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    -webkit-text-fill-color: #fff;
+    margin-top: 4rem;
+    cursor: pointer;
+    position: relative;
+    transition: all;
+    outline: none;
+    color: white;
+}
+.button2:hover{
+    color:  #062c80;
+    scale: 1.3;
+    transition: 0.20s;
+}
+
+.showcase h2{
+    background-color: #76ABDF;
+    text-align: center;
+}
+
+
+
+.container22 {
+    background-image: url('https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+    background-position: 90% 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container22 h1 {
+    margin: 0;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.container22 h1:hover {
+    color: #8dc6ff;
+}
+
+.container23 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+#fact-container {
+    text-align: center;
+    background-color: #0E6AC7;
+    color: white;
+    height: 300px;
+    padding: 29px;
+    border: 20px;
+    opacity: 0.9;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fact {
+    font-size: 2.5em;
+}
+
+.button2 {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.button2:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    height: 50px;
+    background: #062c80;
+    text-align: center;
+    padding: 10px;
+    margin-top: -50px; 
+    clear: both;
+}
